@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniture Store</title>
+    <style>
+        body{
+            background-image: url('C:/Users/User/Downloads/backround.jpg');
+            background-size: 100%;
+        }
+    </style>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background: #444;
+            color: #fff;
+            padding: 15px 0;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        section {
+            padding: 50px 20px;
+            margin: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        #product div {
+            margin-bottom: 20px;
+        }
+        #cart {
+            background-color: #ff9800;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        form {
+            display: inline-block;
+            text-align: left;
+        }
+        label, input {
+            display: block;
+            margin-bottom: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #444;
+            color: #fff;
+        }
+        body{
+            font-family:Arial,
+            sans-serif;
+            margin:0;
+            padding:0;
+            text-align: center;
+        }
+        .slider{
+            position:relative;
+            max-width: 100%;
+            margin:auto;
+            overflow:hidden;
+        }
+        .slides{
+            display:flex;
+            transition:transform 0.5s ease-in-out;
+        }
+        .slides img{
+            width:100%;
+            border:5px solid#fff;
+            border-radius:10px;
+        }
+        .prev, .next{
+            position:absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 8px;
+            cursor: pointer;
+            z-index: 1;
+        }
+        .prev {
+            left: 10px;
+        }
+        .next {
+            right: 10px;
+        }
+        .review-section {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .review-section h2 {
+            text-align: center;
+        }
+        .review-form {
+            margin-bottom: 20px;
+        }
+        .review-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .review-form input, .review-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .review-form button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .review-form button:hover {
+            background-color: #0056b3;
+        }
+        .reviews {
+            margin-top: 20px;
+        }
+        .review {
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+        }
+        .review:last-child {
+            border-bottom: none;
+        }
+        .review p {
+            margin: 5px 0;
+        }
+        .review .reviewer {
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+<body>
+    <div>
+    <a href="#"><img src="C:\Users\User\Pictures\design.jpg"></a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#product">Products</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    </body>
+</header>
+
+<section id="home">
+<h1 style="color: rgba(12, 3, 3, 0.795)">Welcome to Our Furniture Store</h1>
+    <i style="color:rgba(20, 10, 13, 0.61)"> <h3>our wide range of furniture that combines comfort and style.</h3>
+                                               <h3> A furniture shop offers a diverse range of furnishings to enhance homes.</h3>
+                                               <h3> providing both aesthetic appeal and functional utility.</h3>
+                                               <h3>prom classic wooden pieces to modern designs, these shops cater to various tastes and styles.</h3>
+                                               <h3>Ensuring customers find the perfect fit for their living spaces.</i></h3>
+    <div class="slider">
+        <div class="slides">
+            <img src="C:\Users\User\Downloads\image1.jpg" alt="Image1">
+            <img src="C:\Users\User\Downloads\image2.jpg" alt="Image2">
+            <img src="C:\Users\User\Downloads\image3.jpg" alt="Image3">
+            <img src="C:\Users\User\Downloads\image4.jpg" alt="Image4">
+            <img src="C:\Users\User\Downloads\image5.jpg" alt="Image5">
+            <img src="C:\Users\User\Downloads\image6.jpg" alt="Image6">
+            <img src="C:\Users\User\Downloads\image7.jpg" alt="Image7">
+            <img src="C:\Users\User\Downloads\image8.jpg" alt="Image8">
+            <img src="C:\Users\User\Downloads\image9.jpg" alt="Image9">
+            <img src="C:\Users\User\Downloads\image10.jpg" alt="Image10">
+                    </div>
+            <script>
+                let slideIndex = 0;
+            const slides = document.querySelector('.slides');
+            const totalSlides = slides.children.length;
+
+            function showSlides(index) {
+                slideIndex = (index + totalSlides) % totalSlides;
+                slides.style.transform = 'translateX(' + (-slideIndex * 100) + '%)';
+            }
+
+            function moveSlides(step) {
+                showSlides(slideIndex + step);
+            }
+
+            setInterval(() => {
+                moveSlides(1);
+            }, 3000);
+
+            showSlides(slideIndex);
+        </script>
+    </section>
+
+            <a class="prev"
+            onclick="moveSlides(-1)">&#10094;</a>
+            <a class="next"
+            onclick="moveSlides(1)">&#10095;</a>
+            </div>
+</section>
+
+<section id="about">
+    <h2>About Us</h2>
+    <i style="color:#363333"><h3> We are dedicated to providing high-quality furniture that transforms your living space into a comfortable and stylish home.</h3>
+                               <h3>Step into our furniture emporium for a curated selection of timeless designs. </h3>
+                               <h3> From plush sofas to elegant dining sets, discover pieces to elevate every room</h3>
+                               <h3>Crafted with quality materials and attention to detail, our furniture blends style and comfort seamlessly</h3>
+                               <h3> Let our knowledgeable staff guide you to create your dream living space.</h3>
+                               <h3>Experience inspired living at our unparalleled destination for home furnishings. </h3></i>
+</section>
+
+<section id="product">
+    <h2>Our Products</h2>
+    <div>
+        <h3>Modern Sofa</h3>
+        <img src="C:\Users\User\Downloads\sofa.jpg" alt="sofa">
+        <p>Rs:10,000</p>
+        <p>Comfortable and stylish sofa perfect for any living room.</p>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div>
+        <h3>Dining Table</h3>
+        <img src="C:\Users\User\Downloads\table.jpg" alt="Dining table">
+        <p>Rs:15,000</p>
+        <p>Elegant dining table that seats up to six people.</p>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div>
+        <h3>Office Chair</h3>
+        <img src="C:\Users\User\Downloads\office.jpg" alt="Office chair">
+        <P>Rs:3000</P>
+        <p>Ergonomic office chair designed for comfort during long hours of work.</p>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="phone no">Phone no:</label>
+        <input type="phone no" id="number" name="phone no" required>
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+<div id="cart">
+    Items in Cart: <span id="cartCount">0</span>
+</div>
+
+<script>
+    let cartCount = 0;
+
+    function addToCart() {
+        cartCount++;
+        document.getElementById('cartCount').innerText = cartCount;
+        alert('Item added to cart!');
+    }
+
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        alert('Thank you for contacting us, ' + document.getElementById('name').value + '!');
+    });
+
+</script>
+<title>Customer Reviews</title>
+</head>
+<body>
+
+<div class="review-section">
+    <h2>Customer Reviews</h2>
+    <div class="review-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Your name">
+
+        <label for="review">Review:</label>
+        <textarea id="review" rows="4" placeholder="Write your review"></textarea>
+
+        <button onclick="submitReview()">Submit Review</button>
+    </div>
+    <div class="reviews" id="reviews">
+        <!-- Reviews will be inserted here -->
+    </div>
+</div>
+
+<script>
+    function submitReview() {
+        const name = document.getElementById('name').value;
+        const review = document.getElementById('review').value;
+
+        if (name && review) {
+            const reviewsContainer = document.getElementById('reviews');
+
+            const reviewDiv = document.createElement('div');
+            reviewDiv.className = 'review';
+            const reviewer = document.createElement('p');
+            reviewer.className = 'reviewer';
+            reviewer.innerText = name;
+
+            const reviewText = document.createElement('p');
+            reviewText.innerText = review;
+
+            reviewDiv.appendChild(reviewer);
+            reviewDiv.appendChild(reviewText);
+
+            reviewsContainer.appendChild(reviewDiv);
+
+            // Clear the form fields
+            document.getElementById('name').value = '';
+            document.getElementById('review').value = '';
+        } else {
+            alert('Please fill in both fields.');
+        }
+    }
+</script>
+
+
+</body>
+</html>
+
